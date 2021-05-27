@@ -9,7 +9,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 
 import Home from "./app/screens/Home";
-import  Settings from "/app/screens/Settings";
+import  Settings from "./app/screens/Settings";
 
 
 

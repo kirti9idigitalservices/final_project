@@ -3,9 +3,24 @@ import {Text, View ,StyleSheet, Button, Image, Alert,} from 'react-native';
 import { StatusBar } from "expo-status-bar";
 
 function Sms({ navigation }) {
+
+    const createTwoButtonAlert = () =>
+    Alert.alert(
+      "SMS",
+      "Allow to send sms and view SMS messages",
+      [
+        {
+          text: "Cancel",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel"
+        },
+        { text: "OK", onPress: () => console.log("OK Pressed") }
+      ]
+    );
+
     return (
       <View style={styles.container}>
-        <View style= {{flexDirection:'row',}}>
+        <View style= {{flexDirection:'column',}}>
         <Button
           title="Go to Settings"
           onPress={() => navigation.navigate('Settings')}
@@ -28,7 +43,8 @@ function Sms({ navigation }) {
          <Text>
              <Button
                title="Turn on"
-            onPress={() => Alert.alert('Allow to send sms and view SMS messages')}
+               onPress={createTwoButtonAlert} 
+        
             />
  </Text>
         

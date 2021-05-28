@@ -4,7 +4,8 @@ import {Text, View ,StyleSheet, Button} from 'react-native';
 function Home({ navigation }) {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <View style= {{flexDirection:'row',}}>
+        <Text>Home Screen</Text>
+        <View style= {{flexDirection:'column',  marginTop:20}}>
         <Button
           title="Go to Settings"
           onPress={() => navigation.navigate('Settings')}
@@ -20,7 +21,6 @@ function Home({ navigation }) {
           onPress={() => navigation.navigate('Register')}
         />
         </View>
-        <Text>Home Screen</Text>
         
       </View>
     );

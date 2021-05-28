@@ -20,22 +20,7 @@ function Register({ navigation }) {
 
     return (
       <View style={styles.container}>
-        <View style= {{flexDirection:'row',}}>
-        <Button
-          title="Go to Settings"
-          onPress={() => navigation.navigate('Settings')}
-        />
-        <Button
-          title="Register"
-          onPress={() => navigation.navigate('Register')}
-        />
-        <Button
-          title="Go to Login"
-          onPress={() => navigation.navigate('Login')}
-        />
-        <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
-        <Button title="Go to Splash" onPress={() => navigation.navigate('Splash')} />
-        </View>
+             
         <Image style={styles.image} source={require("../../assets/Blue_Logo.png")} />
  
       <StatusBar style="auto" />
@@ -103,7 +88,29 @@ function Register({ navigation }) {
        
 
        
-          <Text style={styles.forgotbutton}>Forgot Password</Text>
+          <Text>Forgot Password</Text>
+          <View style= {{flexDirection:'row',  marginTop:3, marginBottom:3,}}>
+        <View style= {{flexDirection:'column',}}>
+        <Button
+          title="Go to Settings"
+          onPress={() => navigation.navigate('Settings')}
+        />
+        <Button
+          title="Register"
+          onPress={() => navigation.navigate('Register')}
+        />
+        </View>
+        <View style= {{flexDirection:'column',}}>
+        <Button
+          title="Go to Login"
+          onPress={() => navigation.navigate('Login')}
+        />
+        </View>
+        <View  style= {{flexDirection:'column',}}>
+        <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+        <Button title="Go to Splash" onPress={() => navigation.navigate('Splash')} />
+        </View>
+        </View>
         
       </View>
     );
@@ -115,10 +122,10 @@ function Register({ navigation }) {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: "#fff",
-      alignItems: "center",
-      justifyContent: "center",
-      marginBottom: 30,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    
     },
    
     image: {
@@ -138,22 +145,22 @@ const styles = StyleSheet.create({
       height:15,
       width:20,
       marginTop:8,
-      marginLeft: 140,
+      marginLeft: 60,
     },
   
   eiew1:{
       height:15,
       width:20,
       marginTop:8,
-      marginLeft: 70,
+      marginLeft: 60,
     },
   
     
    
     inputView: {
-      backgroundColor: "#ccc",
+      backgroundColor: '#ccc',
       borderRadius: 30,
-      width: "80%",
+      width: '80%',
       height: 40,
       marginBottom: 20,
       flexDirection: 'row',
@@ -165,25 +172,26 @@ const styles = StyleSheet.create({
     TextInput: {
       height: 35,
       marginLeft: 5,
+      width:'50%',
     },
   
     forgotbutton: {
       height: 20,
       marginBottom: 20,
-      backgroundColor: "white",
+      backgroundColor: 'white',
     },
    
     loginBtn: {
-      width: "80%",
+      width: '80%',
       borderRadius: 25,
       height: 50,
-      alignItems: "center",
-      justifyContent: "center",
+      alignItems: 'center',
+      justifyContent: 'center',
       marginTop: 20,
-      backgroundColor: "green",
+      backgroundColor: 'green',
     },
   
     loginText:{
-      color: "white"
+      color: 'white'
     },
   });

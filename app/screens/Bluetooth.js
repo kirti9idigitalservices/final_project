@@ -4,9 +4,25 @@ import { StatusBar } from "expo-status-bar";
 
 
 function Bluetooth({ navigation }) {
+
+    const createTwoButtonAlert = () =>
+    Alert.alert(
+      "Bluetooth",
+      "Application is requesting to turn on Bluetooth. Allow?",
+      [
+        {
+          text: "Cancel",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel"
+        },
+        { text: "OK", onPress: () => console.log("OK Pressed") }
+      ]
+    );
+
+
     return (
         <View style={styles.container}>
-          <View style= {{flexDirection:'row',}}>
+          <View style= {{flexDirection:'column',}}>
           <Button
             title="Go to Settings"
             onPress={() => navigation.navigate('Settings')}
@@ -25,11 +41,12 @@ function Bluetooth({ navigation }) {
           <Image style={styles.image} source={require("../../assets/Blue_Logo.png")} />
    
             <StatusBar style="auto" />
-               <Text> allow sms permission</Text>
+               <Text> allow Bluetooth permission</Text>
            <Text>
                <Button
                  title="Turn on"
-              onPress={() => Alert.alert('Application is requesting to turn on Bluetooth. Allow?')}
+                 onPress={createTwoButtonAlert} 
+              
               />
    </Text>
           

@@ -11,7 +11,9 @@ import { StatusBar } from "expo-status-bar";
 function Splash({ navigation }) {
     return (
       <View style={styles.container}>
-           <View style= {{flexDirection:'row',}}>
+           
+          <Image style={styles.image }source={require("../../assets/Splash_Logo.png")} />
+          <View style= {{flexDirection:'column',  marginTop:20}}>
                  
         <Button
           title="Go to Splash"
@@ -28,7 +30,6 @@ function Splash({ navigation }) {
              <Button title="Go to Bluetooth" onPress={() => navigation.navigate('Bluetooth')} />
        
            </View>
-          <Image style={styles.image }source={require("../../assets/Splash_Logo.png")} />
           <Text style={styles.box}>Bluetooth</Text>
           <StatusBar style="auto" />
       
@@ -43,7 +44,8 @@ function Splash({ navigation }) {
       flex:1,
       backgroundColor: '#0a3d91',
       alignItems: 'center',
-      justifyContent: 'center',},
+      justifyContent: 'center',
+    },
     
       box:{
       

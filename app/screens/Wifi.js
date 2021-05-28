@@ -4,9 +4,24 @@ import { StatusBar } from "expo-status-bar";
 
 
 function Wifi({ navigation }) {
+
+    const createTwoButtonAlert = () =>
+    Alert.alert(
+      "WIFI",
+      "Application needs Wifi permissions.",
+      [
+        {
+          text: "Cancel",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel"
+        },
+        { text: "OK", onPress: () => console.log("OK Pressed") }
+      ]
+    );
+
     return (
       <View  style={styles.container}>
-        <View style= {{flexDirection:'row',}}>
+        <View style= {{flexDirection:'column',}}>
         <Button
           title="Go to Settings"
           onPress={() => navigation.navigate('Settings')}
@@ -28,7 +43,8 @@ function Wifi({ navigation }) {
          <Text> allow Wifi permission</Text>
         <Button
         title="Turn on"
-         onPress={() => Alert.alert('Application needs Wifi permissions.')}
+        onPress={createTwoButtonAlert} 
+         
        />
       
       </View>

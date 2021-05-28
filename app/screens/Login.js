@@ -17,20 +17,23 @@ function Login({ navigation }) {
  
     return (
         <View style={styles.container}>
-            <View style= {{flexDirection:'row',}}>
+          <View style= {{flexDirection:'row',  marginTop:3}}>
+            <View style= {{flexDirection:'column',}}>
           <Button 
            title="Go to Home"
            onPress={() => navigation.push('Home')}/>
            <Button 
             title="Go to Setting" onPress={() => navigation.navigate('Settings')} />
              <Button 
-             title="Go to login" onPress={() => navigation.navigate('Login')} />
+             title="Go to login" onPress={() => navigation.navigate('Login')} /></View>
+             <View style= {{flexDirection:'column',}}>
              <Button 
                 title="Go to spalsh" onPress={() => navigation.navigate('Splash')} />
                 <Button
           title="Register"
           onPress={() => navigation.navigate('Register')}
         />
+        </View>
         </View>
           <Image style={styles.image} source={require("../../assets/Blue_Logo.png")} />
    
@@ -65,7 +68,7 @@ function Login({ navigation }) {
              <Text style={styles.loginText}>Login</Text>
            </TouchableOpacity>
   
-          <Text style={styles.forgotbutton}>Forgot Password</Text>
+          <Text >Forgot Password</Text>
       
      </View>
     );
@@ -78,11 +81,11 @@ function Login({ navigation }) {
  
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: 30,
+    flex:1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    
   },
  
   image: {
@@ -109,20 +112,20 @@ const styles = StyleSheet.create({
 
 
   loginText:{
-    color: "white"
+    color: 'white'
   },
 
  
   
  
   inputView: {
-    backgroundColor: "#ccc",
+    backgroundColor: '#ccc',
     borderRadius: 30,
-    width: "80%",
+    width: '80%',
     height: 45,
     marginBottom: 20,
     flexDirection: 'row',
-    justifiyContent: 'space-between',
+
 
   
   },
@@ -137,17 +140,18 @@ const styles = StyleSheet.create({
     width: 150,
     marginBottom: 10,
     marginTop: 10,
-    backgroundColor: "red",
-    flexDirection: 'row',
+    backgroundColor: 'white',
+    justifyContent: 'center',
+  
   },
  
   loginBtn: {
-    width: "80%",
+    width: '80%',
     borderRadius: 25,
     height: 50,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     marginTop: 20,
-    backgroundColor: "green",
+    backgroundColor: 'green',
   },
 });

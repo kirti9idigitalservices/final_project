@@ -6,7 +6,8 @@ function Settings({ navigation }) {
     return (
     
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <View style= {{flexDirection:'row',}}>
+        <Text>Settings Screen</Text>
+        <View style= {{flexDirection:'column',}}>
         <Button
           title="Go to Settings"
           onPress={() => navigation.push('Settings')}
@@ -19,7 +20,7 @@ function Settings({ navigation }) {
         <Button title="Go to Login" onPress={() => navigation.navigate('Login')} />
         <Button title="Go to Splash" onPress={() => navigation.navigate('Splash')} />
         </View>
-        <Text>Settings Screen</Text>
+        
         
       </View>
     );
